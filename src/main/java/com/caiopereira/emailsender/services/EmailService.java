@@ -38,7 +38,7 @@ public class EmailService {
         } catch (MessagingException e) {
             throw new RuntimeException("Error Creating MimeMessageHelper");
         } catch (MailException e) {
-            throw new RuntimeException("Error Sending Email");
+            throw new RuntimeException("Error Sending Email" + e.getMessage());
         }
     }
 
